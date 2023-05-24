@@ -23,6 +23,9 @@
     </v-app-bar>
 
     <v-main class="bg-grey-lighten-3">
+      <RouterLink to='/aboutMe'>
+        aobutMe
+      </RouterLink>
 
     </v-main>
   </v-app>
