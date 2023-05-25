@@ -18,7 +18,7 @@
         color="grey-darken-2"
       >
         <v-tab
-          text ="首頁"
+          :text = '$t("l-home-page")'
           to = '/'
         />
         <v-tab
@@ -26,11 +26,15 @@
           to = '/github'
         />
         <v-tab
-          text ="部落格"
+          :text = '$t("l-blog")'
           to = '/md'
         />
         <v-tab
-          text ="關於我"
+          :text = '$t("l-show-feature")'
+          to = '/settings'
+        />
+        <v-tab
+          :text = '$t("l-about-me")'
           to = '/aboutMe'
         />
       </v-tabs>

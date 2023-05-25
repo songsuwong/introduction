@@ -14,13 +14,17 @@ const routes = [
     { path: '/aboutMe', component: () => import('@/views/aboutMe.vue') },
     { path: '/md', component: () => import('@/views/md.vue') },
     { path: '/github', component: () => import('@/views/github.vue') },
+    { path: '/settings', component: () => import('@/views/settings.vue') },
 ]
 const Router = createRouter({
     history: createWebHistory(),
     routes: routes,
 });
-console.log(routes)
+
+
 const app = createApp(App)
+
+
 
 registerPlugins(app)
 app.use(Router)
