@@ -8,6 +8,7 @@ import App from './App.vue'
 import { createApp } from 'vue'
 import { registerPlugins } from '@/plugins'
 import { createRouter, createWebHistory } from 'vue-router';
+import 'uno.css'
 
 const routes = [
     { path: '/', component: () => import('@/views/index.vue') },

@@ -40,7 +40,6 @@
       </v-tabs>
       <v-spacer></v-spacer>
     </v-app-bar>
-
     <v-main class="bg-grey-lighten-3">
       <RouterView />
     </v-main>

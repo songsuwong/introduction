@@ -1,7 +1,7 @@
 // Plugins
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-
+import Unocss from 'unocss/vite'
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
@@ -15,6 +15,13 @@ export default defineConfig({
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({
       autoImport: true,
+    }),
+    Unocss({
+      preprocess(matcher) {
+        return matcher.startsWith('uno-')
+          ? matcher.slice(4)
+          : undefined // ignore
+      }
     }),
   ],
   define: { 'process.env': {} },
